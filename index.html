@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="page" onload="changeText()">
+
+	<!-- Add the functions in html code -->
+	<input type="button" id="doge" value="Doggo" onmouseover="addImage()" onmouseout="removeImage()" onclick="showHide()"> 
+
+	<div id="cool" style="display:none"><img src="img/doge.png"></div>
+
+
+	<script>
+function changeText(){  // Create and name function
+  document.getElementById("doge").value = 'Woof!'; // Change value "Doggo" into "Woof"
+}
+</script>
+
+<script>
+function addImage() { // Create and name function
+  document.getElementById("doge").type = "image"; // Change type from "button" to "image"
+  document.getElementById("doge").src = "img/dog.png"; // Find image source
+}
+
+function removeImage() { // Create and name function
+  document.getElementById("doge").type = "button"; // Go back from "image" to "button"
+}
+</script>
+
+<script>
+function showHide(){ // Create and name function
+	if (document.getElementById("cool").style.display == "none") // Original state: hidden
+	{
+		document.getElementById("cool").style.display = "block"; // New state: displayed
+	}
+	else
+	{
+		document.getElementById("cool").style.display = "none"; // Back to original state: hidden
+	}
+}
+</script>
+
+
+
+
+</body>
+
+</html>
