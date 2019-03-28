@@ -12,27 +12,37 @@
 
 <body>
 
-  <div class="container">
-
-    <button type="button" id="doge">Make it rain</button> 
-
-    <img src="img/cat.png" alt="Nyan cat" id="cat">  
-
+  <div id="container">
   </div>
+  <button type="button" id="make_it_rain">Make it rain</button> 
+
+</audio>
 
   <script>
-    
-    var btn = document.getElementById("doge");
-
-    var rainCat = document.getElementById ("cat");
-    rainCat.src = "img/cat.png";
-    rainCat.style.display = "none";
-    document.body.appendChild(rainCat);
-
+  
+    var btn = document.getElementById("make_it_rain");
     btn.addEventListener("click", onClick);
 
-    function onClick() { rainCat.style.display = "block" }
+    var nyanCat = document.createElement ("img"); // Creates the Nyan cat
+    nyanCat.src = "img/cat.png";
+    nyanCat.id = "cat";
+    document.body.appendChild(nyanCat);
+
+    var container = document.getElementById ("container"); // Creates the Nyan cat
+
+    function onClick () {
+      nyanCat.style.display = "block";
+      container.style.display = "block";  
+      btn.style.display = "none";
+    }
+
+
+
+    nyanCat.addEventListener("animationstart", myStartFunction);
+    nyanCat.addEventListener("animationiteration", myRepeatFunction);
+    nyanCat.addEventListener("animationend", myEndFunction);
 
 </script>
+
 
 </body>
