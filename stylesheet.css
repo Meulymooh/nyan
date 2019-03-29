@@ -13,7 +13,6 @@ body {
   width: 400%;
   height: 400%;
   background: url('img/background.png') 0% 0%;
-  animation: background_animation 10s 1 linear;
   display: none;
 }
 
@@ -24,9 +23,9 @@ body {
 
 #make_it_rain {
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 #cat {
@@ -34,12 +33,12 @@ body {
   width: 150px;
   height: 100px;
   position: relative;
-  display: none;
   font-size: 20px;
-  animation: rain 10s 1 linear;
+  display: none;
 }
 
 @keyframes rain {
   from {top: 0; left: 0;}
   to {top: 100%; left: 100%;}
 }
+
