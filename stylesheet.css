@@ -32,7 +32,9 @@ body {
   margin: 0;
   width: 150px;
   height: 100px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   font-size: 20px;
   display: none;
 }

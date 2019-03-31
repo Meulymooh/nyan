@@ -22,17 +22,21 @@
 
   <script>
 
-    var btn = document.getElementById("make_it_rain"); // Button
+	// Button
+    var btn = document.getElementById("make_it_rain"); 
     btn.addEventListener("click", startAnimation);
 
-
-    var nyanCat = document.createElement ("img"); // Cat
+    // Cat
+    var nyanCat = document.createElement ("img"); 
     	nyanCat.src = "img/cat.png";
     	nyanCat.id = "cat";
+    	nyanCat.classList.add('nyanCat');
     document.body.appendChild(nyanCat);
 
-    var container = document.getElementById ("container"); // Background
+    // Background
+    var container = document.getElementById ("container"); 
 
+    // Animation
     function startAnimation() {
     	btn.style.display = "none";
       	nyanCat.style.display = "block";
@@ -44,7 +48,7 @@
 
     function playAudio() { audio.play(); } 
 
-    var timer = setTimeout(animationEnd, 10000);
+    var timer = setTimeout(animationEnd, 40000);
 
     function animationEnd() {
     	location.reload(); 
