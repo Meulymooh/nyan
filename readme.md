@@ -1,4 +1,4 @@
-Nyan Cat v.2 here: https://meulymooh.github.io/nyan-cat-2/index.html
+Nyan Cat v.2 here (no keyframes): https://meulymooh.github.io/nyan-cat-2/index.html
 
 Link v.1: https://meulymooh.github.io/nyan/index.html
 
