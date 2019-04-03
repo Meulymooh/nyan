@@ -11,50 +11,15 @@
 </head>
 
 <body>
-
-  <div id="container">
-  </div>
-  <button type="button" id="make_it_rain">Make it rain</button> 
-	<audio id="myAudio"> 
-	    <source src="audio/nyancat.ogg">
-	    <source src="audio/nyancat.mp3">
-	</audio>
-
-  <script>
-
-	// Button
-    var btn = document.getElementById("make_it_rain"); 
-    btn.addEventListener("click", startAnimation);
-
-    // Cat
-    var nyanCat = document.createElement ("img"); 
-    	nyanCat.src = "img/cat.png";
-    	nyanCat.id = "cat";
-    	nyanCat.classList.add('nyanCat');
-    document.body.appendChild(nyanCat);
-
-    // Background
-    var container = document.getElementById ("container"); 
-
-    // Animation
-    function startAnimation() {
-    	btn.style.display = "none";
-      	nyanCat.style.display = "block";
-      	nyanCat.style.animation = "rain 5s linear infinite";
-      	container.style.display = "block";
-      	container.style.animation = "background_animation 3s linear infinite";
-      	document.getElementById('myAudio').play();
-    }
-
-    function playAudio() { audio.play(); } 
-
-    var timer = setTimeout(animationEnd, 40000);
-
-    function animationEnd() {
-    	location.reload(); 
-    }
-
+  <button id="make_it_rain">Make it rain!</button>
+<!--     <img id ="cat" src="img/cat.png"> -->
+<div id="container">
+</div>
+  <audio id="myAudio"> 
+      <source src="audio/nyancat.ogg">
+      <source src="audio/nyancat.mp3">
+  </audio>
+  
+<script src="javascript.js">
 </script>
-
-
 </body>
